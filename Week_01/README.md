@@ -1,5 +1,5 @@
-学习笔记
-git 仓库配置总结
+# 学习笔记
+## git 仓库配置总结
 1.下载git，安装
 2.window打开GitBash
 3.输入 git --version命令查看git是否安装成功
@@ -34,3 +34,10 @@ ssh -T git@github.commit
 
 后面换成了ssh方式的直接就先git clone把仓库克隆到了本地，
 再按照文章写的，添加文件，cd 到添加过的文件夹里，再git add . 注意得有个点。再提交git commit -m “注释” 最后再把git本地master分支push 到origin分支上
+## 数组，链表，跳表
+数组 -- Array。访问任何一个元素的数组元素是O(1),插入O(n),删除O(n)，
+ArrayList.增加元素时。如果大于当前数组长度，则空间翻。初始是10。
+链表。双向链表（Node链表有前驱节点和后续节点），单向链表（只有后继节点）。循环链表（尾节点的后继节点指向头节点）
+LinkedList
+跳表
+对链表的优化  
