@@ -29,15 +29,48 @@ ssh -T git@github.commit
 14.git push -u origin master 将本地的master分支推送到origin主机
 15.git pull 拉取git上面的更新
 
-？？？git怎么提交README.md到GitHub上面去
-
 
 后面换成了ssh方式的直接就先git clone把仓库克隆到了本地，
 再按照文章写的，添加文件，cd 到添加过的文件夹里，再git add . 注意得有个点。再提交git commit -m “注释” 最后再把git本地master分支push 到origin分支上
 ## 数组，链表，跳表
-数组 -- Array。访问任何一个元素的数组元素是O(1),插入O(n),删除O(n)，
-ArrayList.增加元素时。如果大于当前数组长度，则空间翻。初始是10。
+    数组 -- Array。访问任何一个元素的数组元素是O(1),插入O(n),删除O(n)，
+    ArrayList.增加元素时。如果大于当前数组长度，则空间翻。初始是10。
 链表。双向链表（Node链表有前驱节点和后续节点），单向链表（只有后继节点）。循环链表（尾节点的后继节点指向头节点）
 LinkedList
 跳表
-对链表的优化  
+对链表的优化。在元素有序的情况下对元素进行快速的查询。
+## 栈(Stack) 队列（quene) 双向队列(dequene) 优先队列（PriorityQuene）
+### stack
+    继承自Vector<E> (线程安全的) 
+#### Vector
+    可变数组。超出最大的增长是翻倍增长。默认长度是10 .最大长度为Integer.MAX_VALUE(0x7fffffff)-8,indexOf(e)的时间复杂度是O(n).indexOf(e),比较的时候调用的是Object对象的equals方法。
+    add(o);o(1)
+    remove(o);O(n)
+    indexOf(o);o(n)
+#### 特性
+    后进先出
+#### 底层实现 
+    底层实现是通过数组实现。pop,push,peek.等方法都是调用了vector类的线程安全方法，所以这些方法都是线程安全的。addElement(Object),removeElement(object). 容量的增长是翻倍增长。push，peek,pop的时间复杂度是O（1）.pop是依赖于peek方法。
+ ## 队列(queue)
+    也是用数组实现。
+    特殊的线性表
+    先进先出
+    只可以往前遍历
+    遍历？
+ ## 双向队列（dequeue)
+    LinkedList继承了Dequeue接口,addFirst,addLast,getLast,getLast,
+    可以往前遍历，也可以往后遍历
+    offer();==add();==linkLast();O(1)
+    offerFirst();==addFirst();==linkFirst();O(1)
+    peekFirst();
+    pollFirst();== unlink(first);
+    pop();--removeFirst();O(1)
+    迭代器
+    listIterator();
+    listIterator(index);//linkedList内部定义的迭代器
+## 优先队列（priorityQueue)
+
+    
+    
+
+    
