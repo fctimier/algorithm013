@@ -17,7 +17,7 @@ git config --global user.email "邮箱"
 git config --global --list
 
 9.配置公私钥
-使用ssh -keygen -t rsa -C "你的邮箱"
+使用ssh-keygen -t rsa -C "你的邮箱"
 一直往下enter
 去到刚才提示的那个文件家里面找到文件后缀为_pub的那个文件。把内容复制到github里面的ssh公钥里面去
 
