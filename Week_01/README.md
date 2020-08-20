@@ -29,9 +29,21 @@ ssh -T git@github.commit
 14.git push -u origin master 将本地的master分支推送到origin主机
 15.git pull 拉取git上面的更新
 
+16. Git创建本地仓库，然后将本地仓库推送到github上
+16.1 在本地仓库上执行以上操作。
+16.2 在github上面创建一个远端git仓库,拿到github的仓库地址
+16.3 将本地的Git仓库和GitHub仓库关联 git remote add origin Github仓库地址
+16.4 Local仓库将本地仓库master分支推送到远端仓库上面去。git push origin master
 
 后面换成了ssh方式的直接就先git clone把仓库克隆到了本地，
 再按照文章写的，添加文件，cd 到添加过的文件夹里，再git add . 注意得有个点。再提交git commit -m “注释” 最后再把git本地master分支push 到origin分支上
+## 编程技巧
+    自顶向下的编程
+    案例：回文串
+    把数字和非数字字符全部过滤掉（只考虑字母和数字）忽略大小写
+    corner caser 奇怪的边界条件
+    思考大部分层次逻辑，主干逻辑
+    先写最上层的主干逻辑，把子函数写出来，然后再层层递进
 ## 数组，链表，跳表
     数组 -- Array。访问任何一个元素的数组元素是O(1),插入O(n),删除O(n)，
     ArrayList.增加元素时。如果大于当前数组长度，则空间翻。初始是10。
